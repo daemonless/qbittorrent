@@ -36,12 +36,15 @@ if [ "${WEBUI_AUTH}" = "false" ]; then
     sed -i '' "/^WebUI\\\\AuthSubnetWhitelistEnabled=/d" "${CONF}"
     sed -i '' "/^WebUI\\\\AuthSubnetWhitelist=/d" "${CONF}"
     sed -i '' "/^WebUI\\\\LocalHostAuthenticationEnabled=/d" "${CONF}"
+    sed -i '' "/^WebUI\\\\Address=/d" "${CONF}"
     
     # Insert bypass settings under [Preferences]
+    # We bind to 0.0.0.0 to ensure it works across all backends (Podman/AppJail)
     sed -i '' "/^\[Preferences\]/a\\
 WebUI\\\\AuthSubnetWhitelistEnabled=true\\
 WebUI\\\\AuthSubnetWhitelist=0.0.0.0/0, ::/0\\
-WebUI\\\\LocalHostAuthenticationEnabled=false" "${CONF}"
+WebUI\\\\LocalHostAuthenticationEnabled=false\\
+WebUI\\\\Address=0.0.0.0" "${CONF}"
     echo "[qbittorrent] Web UI authentication disabled (WEBUI_AUTH=false)"
 else
     # Enable Auth: Turn off the whitelist bypass
