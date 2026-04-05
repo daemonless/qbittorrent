@@ -1,0 +1,59 @@
+#!/bin/sh
+# Initialize qBittorrent config directory and apply env var settings
+
+WEBUI_PORT="${WEBUI_PORT:-8080}"
+TORRENTING_PORT="${TORRENTING_PORT:-6881}"
+WEBUI_AUTH="${WEBUI_AUTH:-false}"
+PUID="${PUID:-1000}"
+PGID="${PGID:-1000}"
+
+mkdir -p /config/qBittorrent/config
+chown -R bsd:bsd /config /downloads
+
+# qBittorrent with --profile=/config uses /config/qBittorrent/config/qBittorrent.conf
+CONF=/config/qBittorrent/config/qBittorrent.conf
+
+# 1. Create base config if missing
+if [ ! -f "${CONF}" ]; then
+    cat > "${CONF}" <<EOF
+[BitTorrent]
+Session\Port=${TORRENTING_PORT}
+
+[Preferences]
+WebUI\Port=${WEBUI_PORT}
+EOF
+    chown bsd:bsd "${CONF}"
+    echo "[qbittorrent] Created ${CONF} with base settings"
+fi
+
+# 2. Update ports (always sync with ENV)
+sed -i '' "s|^WebUI\\\\Port=.*|WebUI\\\\Port=${WEBUI_PORT}|" "${CONF}"
+sed -i '' "s|^Session\\\\Port=.*|Session\\\\Port=${TORRENTING_PORT}|" "${CONF}"
+
+# 3. Handle Web UI Authentication Toggle
+if [ "${WEBUI_AUTH}" = "false" ]; then
+    # Disable Auth: Force whitelist bypass for all IPs
+    sed -i '' "/^WebUI\\\\AuthSubnetWhitelistEnabled=/d" "${CONF}"
+    sed -i '' "/^WebUI\\\\AuthSubnetWhitelist=/d" "${CONF}"
+    sed -i '' "/^WebUI\\\\LocalHostAuthenticationEnabled=/d" "${CONF}"
+    
+    # Insert bypass settings under [Preferences]
+    sed -i '' "/^\[Preferences\]/a\\
+WebUI\\\\AuthSubnetWhitelistEnabled=true\\
+WebUI\\\\AuthSubnetWhitelist=0.0.0.0/0, ::/0\\
+WebUI\\\\LocalHostAuthenticationEnabled=false" "${CONF}"
+    echo "[qbittorrent] Web UI authentication disabled (WEBUI_AUTH=false)"
+else
+    # Enable Auth: Turn off the whitelist bypass
+    sed -i '' "s|^WebUI\\\\AuthSubnetWhitelistEnabled=.*|WebUI\\\\AuthSubnetWhitelistEnabled=false|" "${CONF}"
+    echo "[qbittorrent] Web UI authentication enabled (WEBUI_AUTH=true)"
+fi
+
+# 4. Set persistent password if provided
+if [ -n "${WEBUI_PASSWORD}" ]; then
+    HA1=$(printf '%s' "admin:Web Server:${WEBUI_PASSWORD}" | md5)
+    sed -i '' "/^WebUI\\\\Password_ha1=/d" "${CONF}"
+    sed -i '' "/^\[Preferences\]/a\\
+WebUI\\\\Password_ha1=@ByteArray(${HA1})" "${CONF}"
+    echo "[qbittorrent] Password set"
+fi

@@ -1,0 +1,17 @@
+build:
+  pkg_name: qbittorrent-nox
+  variants:
+    - tag: pkg
+      containerfile: Containerfile.pkg
+      aliases: ["latest"]
+      default: true
+    - tag: pkg-latest
+      containerfile: Containerfile.pkg
+      args:
+        BASE_VERSION: "15-latest"
+
+cit:
+  mode: screenshot
+  port: 8080
+  ready: "To control qBittorrent"
+  screenshot_wait: 3

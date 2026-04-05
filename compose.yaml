@@ -1,0 +1,54 @@
+name: qbittorrent
+
+x-daemonless:
+  title: "qBittorrent"
+  icon: ":simple-qbittorrent:"
+  category: "Downloaders"
+  description: "Fast, stable BitTorrent client with a feature-rich web UI. Supports DHT, PEX, encryption, magnet links, RSS, IP filtering, and remote management."
+  upstream_url: "https://github.com/qbittorrent/qBittorrent"
+  web_url: "https://www.qbittorrent.org/"
+  freshports_url: "https://www.freshports.org/net-p2p/qbittorrent/"
+  user: "bsd"
+  mlock: false
+  community: "Discord:https://discord.gg/Kb9tkhecZT"
+  appjail: true
+
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+      WEBUI_PORT: "Web UI port (must match port mapping)"
+      TORRENTING_PORT: "BitTorrent listening port for peer connections (must match port mapping)"
+      WEBUI_PASSWORD: "Set a persistent admin password. If unset, a temporary password is generated each restart and printed to the logs."
+      WEBUI_AUTH: "Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled)."
+    volumes:
+      /config: "Configuration directory"
+      /downloads: "Download directory"
+    ports:
+      8080: "Web UI"
+      6881: "BitTorrent peer connections (TCP/UDP)"
+
+services:
+  qbittorrent:
+    image: ghcr.io/daemonless/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+      - WEBUI_PASSWORD=
+      - WEBUI_AUTH=false
+
+    volumes:
+      - /path/to/containers/qbittorrent:/config
+      - /path/to/downloads:/downloads
+
+    ports:
+      - 8080:8080
+      - 6881:6881
+      - 6881:6881/udp
