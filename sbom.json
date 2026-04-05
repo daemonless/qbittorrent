@@ -1,0 +1,1428 @@
+{
+  "generated": "2026-04-05T17:16:13Z",
+  "image": "qbittorrent",
+  "tags": {
+    "pkg": {
+      "app_version": "5.1.4_1",
+      "arch": "amd64",
+      "generated": "2026-04-05T17:15:04Z",
+      "packages": {
+        "dotnet": [],
+        "freebsd": [
+          {
+            "name": "FreeBSD-audit-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-blocklist",
+            "version": "15.0p3"
+          },
+          {
+            "name": "FreeBSD-bzip2-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-certctl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-clibs",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-clibs-lib32",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-ctf-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-devmatch",
+            "version": "15.0p2"
+          },
+          {
+            "name": "FreeBSD-fetch",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-kerberos-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libarchive",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libbsdstat",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libcasper",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libexecinfo",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libldns",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libmagic",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libucl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-mtree",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-ncurses-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-openssl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-openssl-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-pkg-bootstrap",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-rc",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-runtime",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-tcpd",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-ufs-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-utilities",
+            "version": "15.0p1"
+          },
+          {
+            "name": "FreeBSD-xz-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-zfs-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-zlib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-zoneinfo",
+            "version": "15.0"
+          },
+          {
+            "name": "adwaita-icon-theme",
+            "version": "47.0"
+          },
+          {
+            "name": "adwaita-icon-theme-legacy",
+            "version": "46.2"
+          },
+          {
+            "name": "at-spi2-core",
+            "version": "2.56.7"
+          },
+          {
+            "name": "avahi-app",
+            "version": "0.8_6"
+          },
+          {
+            "name": "boost-libs",
+            "version": "1.89.0_2"
+          },
+          {
+            "name": "brotli",
+            "version": "1.2.0,1"
+          },
+          {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
+          },
+          {
+            "name": "cairo",
+            "version": "1.18.2,3"
+          },
+          {
+            "name": "colord",
+            "version": "1.4.8"
+          },
+          {
+            "name": "cups",
+            "version": "2.4.16"
+          },
+          {
+            "name": "dav1d",
+            "version": "1.5.3"
+          },
+          {
+            "name": "dbus",
+            "version": "1.16.2_4,1"
+          },
+          {
+            "name": "dbus-glib",
+            "version": "0.114"
+          },
+          {
+            "name": "double-conversion",
+            "version": "3.3.1"
+          },
+          {
+            "name": "duktape-lib",
+            "version": "2.7.0_1"
+          },
+          {
+            "name": "execline",
+            "version": "2.9.7.0"
+          },
+          {
+            "name": "expat",
+            "version": "2.7.4"
+          },
+          {
+            "name": "fontconfig",
+            "version": "2.17.1,1"
+          },
+          {
+            "name": "freetype2",
+            "version": "2.14.1"
+          },
+          {
+            "name": "fribidi",
+            "version": "1.0.16"
+          },
+          {
+            "name": "gdbm",
+            "version": "1.26"
+          },
+          {
+            "name": "gdk-pixbuf2",
+            "version": "2.44.1"
+          },
+          {
+            "name": "gettext-runtime",
+            "version": "0.26"
+          },
+          {
+            "name": "glib",
+            "version": "2.84.4,2"
+          },
+          {
+            "name": "gmp",
+            "version": "6.3.0"
+          },
+          {
+            "name": "gnome_subr",
+            "version": "1.0"
+          },
+          {
+            "name": "gnutls",
+            "version": "3.8.12"
+          },
+          {
+            "name": "gobject-introspection",
+            "version": "1.84.0,1"
+          },
+          {
+            "name": "graphite2",
+            "version": "1.3.14"
+          },
+          {
+            "name": "gsettings-desktop-schemas",
+            "version": "47.1_2"
+          },
+          {
+            "name": "gtk-update-icon-cache",
+            "version": "3.24.42"
+          },
+          {
+            "name": "gtk3",
+            "version": "3.24.51"
+          },
+          {
+            "name": "harfbuzz",
+            "version": "12.3.0"
+          },
+          {
+            "name": "hicolor-icon-theme",
+            "version": "0.18"
+          },
+          {
+            "name": "hwdata",
+            "version": "0.403,1"
+          },
+          {
+            "name": "icu",
+            "version": "76.1,1"
+          },
+          {
+            "name": "indexinfo",
+            "version": "0.3.1_1"
+          },
+          {
+            "name": "jbigkit",
+            "version": "2.1_3"
+          },
+          {
+            "name": "jpeg-turbo",
+            "version": "3.1.3"
+          },
+          {
+            "name": "jq",
+            "version": "1.8.1"
+          },
+          {
+            "name": "json-glib",
+            "version": "1.10.8"
+          },
+          {
+            "name": "lcms2",
+            "version": "2.17"
+          },
+          {
+            "name": "lerc",
+            "version": "4.0.0"
+          },
+          {
+            "name": "libICE",
+            "version": "1.1.2,1"
+          },
+          {
+            "name": "libSM",
+            "version": "1.2.6,1"
+          },
+          {
+            "name": "libX11",
+            "version": "1.8.12,1"
+          },
+          {
+            "name": "libXau",
+            "version": "1.0.12"
+          },
+          {
+            "name": "libXcomposite",
+            "version": "0.4.6_1,1"
+          },
+          {
+            "name": "libXcursor",
+            "version": "1.2.3"
+          },
+          {
+            "name": "libXdamage",
+            "version": "1.1.6"
+          },
+          {
+            "name": "libXdmcp",
+            "version": "1.1.5"
+          },
+          {
+            "name": "libXext",
+            "version": "1.3.6,1"
+          },
+          {
+            "name": "libXfixes",
+            "version": "6.0.1"
+          },
+          {
+            "name": "libXft",
+            "version": "2.3.8"
+          },
+          {
+            "name": "libXi",
+            "version": "1.8.2,1"
+          },
+          {
+            "name": "libXinerama",
+            "version": "1.1.5,1"
+          },
+          {
+            "name": "libXrandr",
+            "version": "1.5.4"
+          },
+          {
+            "name": "libXrender",
+            "version": "0.9.12"
+          },
+          {
+            "name": "libXtst",
+            "version": "1.2.5"
+          },
+          {
+            "name": "libb2",
+            "version": "0.98.1_1"
+          },
+          {
+            "name": "libdaemon",
+            "version": "0.14_1"
+          },
+          {
+            "name": "libdatrie",
+            "version": "0.2.14_1"
+          },
+          {
+            "name": "libdeflate",
+            "version": "1.25"
+          },
+          {
+            "name": "libdrm",
+            "version": "2.4.131,1"
+          },
+          {
+            "name": "libedit",
+            "version": "3.1.20251016_1,1"
+          },
+          {
+            "name": "libepoll-shim",
+            "version": "0.0.20240608"
+          },
+          {
+            "name": "libepoxy",
+            "version": "1.5.10"
+          },
+          {
+            "name": "libevdev",
+            "version": "1.13.2"
+          },
+          {
+            "name": "libevent",
+            "version": "2.1.12"
+          },
+          {
+            "name": "libffi",
+            "version": "3.5.1"
+          },
+          {
+            "name": "libglvnd",
+            "version": "1.7.0"
+          },
+          {
+            "name": "libgudev",
+            "version": "237"
+          },
+          {
+            "name": "libgusb",
+            "version": "0.4.9_1"
+          },
+          {
+            "name": "libiconv",
+            "version": "1.18_1"
+          },
+          {
+            "name": "libidn2",
+            "version": "2.3.8"
+          },
+          {
+            "name": "libinput",
+            "version": "1.28.1"
+          },
+          {
+            "name": "libmtdev",
+            "version": "1.1.7"
+          },
+          {
+            "name": "libpaper",
+            "version": "1.1.28_1"
+          },
+          {
+            "name": "libpciaccess",
+            "version": "0.18.1_1"
+          },
+          {
+            "name": "librsvg2-rust",
+            "version": "2.61.3"
+          },
+          {
+            "name": "libtasn1",
+            "version": "4.21.0"
+          },
+          {
+            "name": "libthai",
+            "version": "0.1.30"
+          },
+          {
+            "name": "libtorrent-rasterbar2",
+            "version": "2.0.11_3"
+          },
+          {
+            "name": "libudev-devd",
+            "version": "0.6.0"
+          },
+          {
+            "name": "libunistring",
+            "version": "1.4.1"
+          },
+          {
+            "name": "libwacom",
+            "version": "2.12.1"
+          },
+          {
+            "name": "libxcb",
+            "version": "1.17.0"
+          },
+          {
+            "name": "libxkbcommon",
+            "version": "1.13.1"
+          },
+          {
+            "name": "libxml2",
+            "version": "2.15.2"
+          },
+          {
+            "name": "llvm19",
+            "version": "19.1.7_1"
+          },
+          {
+            "name": "lua53",
+            "version": "5.3.6_1"
+          },
+          {
+            "name": "lzo2",
+            "version": "2.10_1"
+          },
+          {
+            "name": "mpdecimal",
+            "version": "4.0.1"
+          },
+          {
+            "name": "nettle",
+            "version": "3.10.2"
+          },
+          {
+            "name": "oniguruma",
+            "version": "6.9.10"
+          },
+          {
+            "name": "p11-kit",
+            "version": "0.26.2"
+          },
+          {
+            "name": "pango",
+            "version": "1.56.4"
+          },
+          {
+            "name": "pcre2",
+            "version": "10.47_1"
+          },
+          {
+            "name": "perl5",
+            "version": "5.42.2"
+          },
+          {
+            "name": "pixman",
+            "version": "0.46.2"
+          },
+          {
+            "name": "pkg",
+            "version": "2.5.1"
+          },
+          {
+            "name": "png",
+            "version": "1.6.53"
+          },
+          {
+            "name": "polkit",
+            "version": "127"
+          },
+          {
+            "name": "py311-evdev",
+            "version": "1.9.1_1"
+          },
+          {
+            "name": "py311-libevdev",
+            "version": "0.11_2"
+          },
+          {
+            "name": "py311-packaging",
+            "version": "25.0"
+          },
+          {
+            "name": "py311-pyudev",
+            "version": "0.24.1_1"
+          },
+          {
+            "name": "py311-six",
+            "version": "1.17.0"
+          },
+          {
+            "name": "python311",
+            "version": "3.11.15"
+          },
+          {
+            "name": "qbittorrent-nox",
+            "version": "5.1.4_1"
+          },
+          {
+            "name": "qt6-base",
+            "version": "6.10.1_1"
+          },
+          {
+            "name": "qt6-base_sqldriver-sqlite",
+            "version": "6.10.1"
+          },
+          {
+            "name": "qt6-declarative",
+            "version": "6.10.1_2"
+          },
+          {
+            "name": "qt6-svg",
+            "version": "6.10.1"
+          },
+          {
+            "name": "qt6-tools",
+            "version": "6.10.1"
+          },
+          {
+            "name": "qt6-translations",
+            "version": "6.10.1"
+          },
+          {
+            "name": "readline",
+            "version": "8.3.3"
+          },
+          {
+            "name": "s6",
+            "version": "2.13.2.0"
+          },
+          {
+            "name": "shared-mime-info",
+            "version": "2.4_2"
+          },
+          {
+            "name": "skalibs",
+            "version": "2.14.4.0"
+          },
+          {
+            "name": "sqlite3",
+            "version": "3.50.4_2,1"
+          },
+          {
+            "name": "tiff",
+            "version": "4.7.1"
+          },
+          {
+            "name": "vulkan-loader",
+            "version": "1.4.336"
+          },
+          {
+            "name": "wayland",
+            "version": "1.24.0_2"
+          },
+          {
+            "name": "xcb-util",
+            "version": "0.4.1,1"
+          },
+          {
+            "name": "xcb-util-cursor",
+            "version": "0.1.5"
+          },
+          {
+            "name": "xcb-util-image",
+            "version": "0.4.1"
+          },
+          {
+            "name": "xcb-util-keysyms",
+            "version": "0.4.1"
+          },
+          {
+            "name": "xcb-util-renderutil",
+            "version": "0.3.10"
+          },
+          {
+            "name": "xcb-util-wm",
+            "version": "0.4.2"
+          },
+          {
+            "name": "xkeyboard-config",
+            "version": "2.41_4"
+          },
+          {
+            "name": "xorgproto",
+            "version": "2024.1"
+          },
+          {
+            "name": "zstd",
+            "version": "1.5.7_1"
+          }
+        ],
+        "go": [],
+        "java": [],
+        "node": [],
+        "php": [],
+        "python": [
+          {
+            "name": "evdev",
+            "version": "1.9.1"
+          },
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "libevdev",
+            "version": "0.11"
+          },
+          {
+            "name": "packaging",
+            "version": "25.0"
+          },
+          {
+            "name": "pyudev",
+            "version": "0.24.1"
+          },
+          {
+            "name": "six",
+            "version": "1.17.0"
+          }
+        ],
+        "ruby": [],
+        "rust": []
+      },
+      "source": "pkg",
+      "summary": {
+        "dotnet": 0,
+        "freebsd": 164,
+        "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 6,
+        "ruby": 0,
+        "rust": 0,
+        "total": 170
+      }
+    },
+    "pkg-latest": {
+      "app_version": "5.1.4_1",
+      "arch": "amd64",
+      "generated": "2026-04-05T17:15:04Z",
+      "packages": {
+        "dotnet": [],
+        "freebsd": [
+          {
+            "name": "FreeBSD-audit-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-blocklist",
+            "version": "15.0p3"
+          },
+          {
+            "name": "FreeBSD-bzip2-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-certctl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-clibs",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-clibs-lib32",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-ctf-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-devmatch",
+            "version": "15.0p2"
+          },
+          {
+            "name": "FreeBSD-fetch",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-kerberos-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libarchive",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libbsdstat",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libcasper",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libexecinfo",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libldns",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libmagic",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-libucl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-mtree",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-ncurses-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-openssl",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-openssl-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-pkg-bootstrap",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-rc",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-runtime",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-tcpd",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-ufs-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-utilities",
+            "version": "15.0p1"
+          },
+          {
+            "name": "FreeBSD-xz-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-zfs-lib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-zlib",
+            "version": "15.0"
+          },
+          {
+            "name": "FreeBSD-zoneinfo",
+            "version": "15.0"
+          },
+          {
+            "name": "adwaita-icon-theme",
+            "version": "47.0"
+          },
+          {
+            "name": "adwaita-icon-theme-legacy",
+            "version": "46.2"
+          },
+          {
+            "name": "at-spi2-core",
+            "version": "2.56.8"
+          },
+          {
+            "name": "avahi-app",
+            "version": "0.8_6"
+          },
+          {
+            "name": "boost-libs",
+            "version": "1.89.0_2"
+          },
+          {
+            "name": "brotli",
+            "version": "1.2.0,1"
+          },
+          {
+            "name": "ca_root_nss",
+            "version": "3.117_2"
+          },
+          {
+            "name": "cairo",
+            "version": "1.18.2,3"
+          },
+          {
+            "name": "colord",
+            "version": "1.4.8_1"
+          },
+          {
+            "name": "cups",
+            "version": "2.4.16"
+          },
+          {
+            "name": "dav1d",
+            "version": "1.5.3_1"
+          },
+          {
+            "name": "dbus",
+            "version": "1.16.2_4,1"
+          },
+          {
+            "name": "dbus-glib",
+            "version": "0.114"
+          },
+          {
+            "name": "double-conversion",
+            "version": "3.3.1"
+          },
+          {
+            "name": "duktape-lib",
+            "version": "2.7.0_1"
+          },
+          {
+            "name": "execline",
+            "version": "2.9.8.1"
+          },
+          {
+            "name": "expat",
+            "version": "2.7.5"
+          },
+          {
+            "name": "fontconfig",
+            "version": "2.17.1,1"
+          },
+          {
+            "name": "freetype2",
+            "version": "2.14.3"
+          },
+          {
+            "name": "fribidi",
+            "version": "1.0.16"
+          },
+          {
+            "name": "gdbm",
+            "version": "1.26"
+          },
+          {
+            "name": "gdk-pixbuf2",
+            "version": "2.44.1"
+          },
+          {
+            "name": "gettext-runtime",
+            "version": "1.0"
+          },
+          {
+            "name": "glib",
+            "version": "2.84.4,2"
+          },
+          {
+            "name": "gmp",
+            "version": "6.3.0"
+          },
+          {
+            "name": "gnome_subr",
+            "version": "1.0"
+          },
+          {
+            "name": "gnutls",
+            "version": "3.8.12"
+          },
+          {
+            "name": "gobject-introspection",
+            "version": "1.84.0,1"
+          },
+          {
+            "name": "graphite2",
+            "version": "1.3.14"
+          },
+          {
+            "name": "gsettings-desktop-schemas",
+            "version": "47.1_2"
+          },
+          {
+            "name": "gtk-update-icon-cache",
+            "version": "3.24.42"
+          },
+          {
+            "name": "gtk3",
+            "version": "3.24.52"
+          },
+          {
+            "name": "harfbuzz",
+            "version": "13.2.1"
+          },
+          {
+            "name": "hicolor-icon-theme",
+            "version": "0.18"
+          },
+          {
+            "name": "hwdata",
+            "version": "0.405,1"
+          },
+          {
+            "name": "icu",
+            "version": "76.1,1"
+          },
+          {
+            "name": "indexinfo",
+            "version": "0.3.1_1"
+          },
+          {
+            "name": "jbigkit",
+            "version": "2.1_3"
+          },
+          {
+            "name": "jpeg-turbo",
+            "version": "3.1.3"
+          },
+          {
+            "name": "jq",
+            "version": "1.8.1"
+          },
+          {
+            "name": "json-glib",
+            "version": "1.10.8"
+          },
+          {
+            "name": "lcms2",
+            "version": "2.18"
+          },
+          {
+            "name": "lerc",
+            "version": "4.0.0"
+          },
+          {
+            "name": "libICE",
+            "version": "1.1.2,1"
+          },
+          {
+            "name": "libSM",
+            "version": "1.2.6,1"
+          },
+          {
+            "name": "libX11",
+            "version": "1.8.13,1"
+          },
+          {
+            "name": "libXau",
+            "version": "1.0.12"
+          },
+          {
+            "name": "libXcomposite",
+            "version": "0.4.6_1,1"
+          },
+          {
+            "name": "libXcursor",
+            "version": "1.2.3"
+          },
+          {
+            "name": "libXdamage",
+            "version": "1.1.6"
+          },
+          {
+            "name": "libXdmcp",
+            "version": "1.1.5"
+          },
+          {
+            "name": "libXext",
+            "version": "1.3.6,1"
+          },
+          {
+            "name": "libXfixes",
+            "version": "6.0.1"
+          },
+          {
+            "name": "libXft",
+            "version": "2.3.8"
+          },
+          {
+            "name": "libXi",
+            "version": "1.8.2,1"
+          },
+          {
+            "name": "libXinerama",
+            "version": "1.1.5,1"
+          },
+          {
+            "name": "libXrandr",
+            "version": "1.5.4"
+          },
+          {
+            "name": "libXrender",
+            "version": "0.9.12"
+          },
+          {
+            "name": "libXtst",
+            "version": "1.2.5"
+          },
+          {
+            "name": "libb2",
+            "version": "0.98.1_1"
+          },
+          {
+            "name": "libdaemon",
+            "version": "0.14_1"
+          },
+          {
+            "name": "libdatrie",
+            "version": "0.2.14_1"
+          },
+          {
+            "name": "libdeflate",
+            "version": "1.25"
+          },
+          {
+            "name": "libdrm",
+            "version": "2.4.131,1"
+          },
+          {
+            "name": "libedit",
+            "version": "3.1.20251016_1,1"
+          },
+          {
+            "name": "libepoll-shim",
+            "version": "0.0.20240608"
+          },
+          {
+            "name": "libepoxy",
+            "version": "1.5.10"
+          },
+          {
+            "name": "libevdev",
+            "version": "1.13.2"
+          },
+          {
+            "name": "libevent",
+            "version": "2.1.12"
+          },
+          {
+            "name": "libffi",
+            "version": "3.5.1"
+          },
+          {
+            "name": "libglvnd",
+            "version": "1.7.0"
+          },
+          {
+            "name": "libgudev",
+            "version": "237"
+          },
+          {
+            "name": "libgusb",
+            "version": "0.4.9_1"
+          },
+          {
+            "name": "libiconv",
+            "version": "1.18_1"
+          },
+          {
+            "name": "libidn2",
+            "version": "2.3.8"
+          },
+          {
+            "name": "libinput",
+            "version": "1.28.1"
+          },
+          {
+            "name": "libmtdev",
+            "version": "1.1.7"
+          },
+          {
+            "name": "libpaper",
+            "version": "1.1.28_1"
+          },
+          {
+            "name": "libpciaccess",
+            "version": "0.18.1_1"
+          },
+          {
+            "name": "librsvg2-rust",
+            "version": "2.62.0_1"
+          },
+          {
+            "name": "libtasn1",
+            "version": "4.21.0"
+          },
+          {
+            "name": "libthai",
+            "version": "0.1.30"
+          },
+          {
+            "name": "libtorrent-rasterbar2",
+            "version": "2.0.12"
+          },
+          {
+            "name": "libudev-devd",
+            "version": "0.6.0"
+          },
+          {
+            "name": "libunistring",
+            "version": "1.4.2"
+          },
+          {
+            "name": "libwacom",
+            "version": "2.12.1"
+          },
+          {
+            "name": "libxcb",
+            "version": "1.17.0"
+          },
+          {
+            "name": "libxkbcommon",
+            "version": "1.13.1"
+          },
+          {
+            "name": "libxml2",
+            "version": "2.15.2"
+          },
+          {
+            "name": "llvm19",
+            "version": "19.1.7_1"
+          },
+          {
+            "name": "lua53",
+            "version": "5.3.6_1"
+          },
+          {
+            "name": "lzo2",
+            "version": "2.10_1"
+          },
+          {
+            "name": "mpdecimal",
+            "version": "4.0.1"
+          },
+          {
+            "name": "nettle",
+            "version": "3.10.2"
+          },
+          {
+            "name": "oniguruma",
+            "version": "6.9.10"
+          },
+          {
+            "name": "p11-kit",
+            "version": "0.26.2"
+          },
+          {
+            "name": "pango",
+            "version": "1.56.4_1"
+          },
+          {
+            "name": "pcre2",
+            "version": "10.47_1"
+          },
+          {
+            "name": "perl5",
+            "version": "5.42.2"
+          },
+          {
+            "name": "pixman",
+            "version": "0.46.2"
+          },
+          {
+            "name": "pkg",
+            "version": "2.6.2_1"
+          },
+          {
+            "name": "png",
+            "version": "1.6.55"
+          },
+          {
+            "name": "polkit",
+            "version": "127"
+          },
+          {
+            "name": "py311-evdev",
+            "version": "1.9.1_1"
+          },
+          {
+            "name": "py311-libevdev",
+            "version": "0.11_2"
+          },
+          {
+            "name": "py311-packaging",
+            "version": "26.0"
+          },
+          {
+            "name": "py311-pyudev",
+            "version": "0.24.1_1"
+          },
+          {
+            "name": "py311-six",
+            "version": "1.17.0"
+          },
+          {
+            "name": "python311",
+            "version": "3.11.15_1"
+          },
+          {
+            "name": "qbittorrent-nox",
+            "version": "5.1.4_1"
+          },
+          {
+            "name": "qt6-base",
+            "version": "6.10.2_1"
+          },
+          {
+            "name": "qt6-base_sqldriver-sqlite",
+            "version": "6.10.2"
+          },
+          {
+            "name": "qt6-declarative",
+            "version": "6.10.2"
+          },
+          {
+            "name": "qt6-svg",
+            "version": "6.10.2"
+          },
+          {
+            "name": "qt6-tools",
+            "version": "6.10.2"
+          },
+          {
+            "name": "qt6-translations",
+            "version": "6.10.2"
+          },
+          {
+            "name": "readline",
+            "version": "8.3.3"
+          },
+          {
+            "name": "s6",
+            "version": "2.14.0.1"
+          },
+          {
+            "name": "shared-mime-info",
+            "version": "2.4_2"
+          },
+          {
+            "name": "skalibs",
+            "version": "2.14.5.1"
+          },
+          {
+            "name": "sqlite3",
+            "version": "3.50.4_2,1"
+          },
+          {
+            "name": "tiff",
+            "version": "4.7.1"
+          },
+          {
+            "name": "vulkan-loader",
+            "version": "1.4.336"
+          },
+          {
+            "name": "wayland",
+            "version": "1.24.0_2"
+          },
+          {
+            "name": "xcb-util",
+            "version": "0.4.1,1"
+          },
+          {
+            "name": "xcb-util-cursor",
+            "version": "0.1.5"
+          },
+          {
+            "name": "xcb-util-image",
+            "version": "0.4.1"
+          },
+          {
+            "name": "xcb-util-keysyms",
+            "version": "0.4.1"
+          },
+          {
+            "name": "xcb-util-renderutil",
+            "version": "0.3.10"
+          },
+          {
+            "name": "xcb-util-wm",
+            "version": "0.4.2"
+          },
+          {
+            "name": "xkeyboard-config",
+            "version": "2.41_4"
+          },
+          {
+            "name": "xorgproto",
+            "version": "2024.1"
+          },
+          {
+            "name": "zstd",
+            "version": "1.5.7_1"
+          }
+        ],
+        "go": [],
+        "java": [],
+        "node": [],
+        "php": [],
+        "python": [
+          {
+            "name": "evdev",
+            "version": "1.9.1"
+          },
+          {
+            "name": "example",
+            "version": "21.12"
+          },
+          {
+            "name": "libevdev",
+            "version": "0.11"
+          },
+          {
+            "name": "packaging",
+            "version": "26.0"
+          },
+          {
+            "name": "pyudev",
+            "version": "0.24.1"
+          },
+          {
+            "name": "six",
+            "version": "1.17.0"
+          }
+        ],
+        "ruby": [],
+        "rust": []
+      },
+      "source": "pkg",
+      "summary": {
+        "dotnet": 0,
+        "freebsd": 164,
+        "go": 0,
+        "java": 0,
+        "node": 0,
+        "php": 0,
+        "python": 6,
+        "ruby": 0,
+        "rust": 0,
+        "total": 170
+      }
+    }
+  }
+}
