@@ -1,11 +1,11 @@
 {
-  "generated": "2026-04-17T08:02:05Z",
+  "generated": "2026-04-30T23:42:31Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.1.4_1",
       "arch": "amd64",
-      "generated": "2026-04-17T08:00:51Z",
+      "generated": "2026-04-30T23:41:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -87,11 +87,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -103,7 +103,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -171,7 +171,7 @@
           },
           {
             "name": "cups",
-            "version": "2.4.16"
+            "version": "2.4.18"
           },
           {
             "name": "dav1d",
@@ -299,7 +299,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.18"
+            "version": "2.19"
           },
           {
             "name": "lerc",
@@ -716,7 +716,7 @@
     "pkg-latest": {
       "app_version": "5.1.4_1",
       "arch": "amd64",
-      "generated": "2026-04-17T08:00:33Z",
+      "generated": "2026-04-30T23:39:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -798,11 +798,11 @@
           },
           {
             "name": "FreeBSD-openssl",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-openssl-lib",
-            "version": "15.0"
+            "version": "15.0p2"
           },
           {
             "name": "FreeBSD-pkg-bootstrap",
@@ -814,7 +814,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0"
+            "version": "15.0p6"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -854,7 +854,7 @@
           },
           {
             "name": "at-spi2-core",
-            "version": "2.56.8"
+            "version": "2.60.1"
           },
           {
             "name": "avahi-app",
@@ -878,11 +878,11 @@
           },
           {
             "name": "colord",
-            "version": "1.4.8_1"
+            "version": "1.4.8_2"
           },
           {
             "name": "cups",
-            "version": "2.4.16"
+            "version": "2.4.18"
           },
           {
             "name": "dav1d",
@@ -898,7 +898,7 @@
           },
           {
             "name": "double-conversion",
-            "version": "3.3.1"
+            "version": "3.4.0"
           },
           {
             "name": "duktape-lib",
@@ -910,7 +910,7 @@
           },
           {
             "name": "expat",
-            "version": "2.7.5"
+            "version": "2.8.0"
           },
           {
             "name": "fontconfig",
@@ -1010,7 +1010,7 @@
           },
           {
             "name": "lcms2",
-            "version": "2.18"
+            "version": "2.19"
           },
           {
             "name": "lerc",
@@ -1026,7 +1026,7 @@
           },
           {
             "name": "libX11",
-            "version": "1.8.13,1"
+            "version": "1.8.13_1,1"
           },
           {
             "name": "libXau",
@@ -1162,7 +1162,7 @@
           },
           {
             "name": "librsvg2-rust",
-            "version": "2.62.0_1"
+            "version": "2.62.0_2"
           },
           {
             "name": "libtasn1",
@@ -1198,7 +1198,7 @@
           },
           {
             "name": "libxml2",
-            "version": "2.15.2_1"
+            "version": "2.15.3"
           },
           {
             "name": "llvm19",
@@ -1210,7 +1210,7 @@
           },
           {
             "name": "lzo2",
-            "version": "2.10_1"
+            "version": "2.10_2"
           },
           {
             "name": "mpdecimal",
@@ -1246,11 +1246,11 @@
           },
           {
             "name": "pkg",
-            "version": "2.7.3"
+            "version": "2.7.4"
           },
           {
             "name": "png",
-            "version": "1.6.57"
+            "version": "1.6.58"
           },
           {
             "name": "polkit",
@@ -1266,7 +1266,7 @@
           },
           {
             "name": "py311-packaging",
-            "version": "26.0"
+            "version": "26.1"
           },
           {
             "name": "py311-pyudev",
@@ -1396,7 +1396,7 @@
           },
           {
             "name": "packaging",
-            "version": "26.0"
+            "version": "26.1"
           },
           {
             "name": "pyudev",
