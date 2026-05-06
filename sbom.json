@@ -1,11 +1,11 @@
 {
-  "generated": "2026-05-03T20:02:50Z",
+  "generated": "2026-05-06T13:24:02Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.1.4_1",
       "arch": "amd64",
-      "generated": "2026-05-03T20:01:37Z",
+      "generated": "2026-05-06T13:21:16Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -171,7 +171,7 @@
           },
           {
             "name": "cups",
-            "version": "2.4.18"
+            "version": "2.4.19"
           },
           {
             "name": "dav1d",
@@ -239,7 +239,7 @@
           },
           {
             "name": "gnutls",
-            "version": "3.8.12"
+            "version": "3.8.13"
           },
           {
             "name": "gobject-introspection",
@@ -714,9 +714,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "5.1.4_1",
+      "app_version": "5.2.0",
       "arch": "amd64",
-      "generated": "2026-05-03T20:00:43Z",
+      "generated": "2026-05-06T13:22:49Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -938,7 +938,7 @@
           },
           {
             "name": "glib",
-            "version": "2.84.4,2"
+            "version": "2.86.4,2"
           },
           {
             "name": "gmp",
@@ -954,7 +954,7 @@
           },
           {
             "name": "gobject-introspection",
-            "version": "1.84.0,1"
+            "version": "1.86.0,1"
           },
           {
             "name": "graphite2",
@@ -1034,7 +1034,7 @@
           },
           {
             "name": "libXcomposite",
-            "version": "0.4.6_1,1"
+            "version": "0.4.7,1"
           },
           {
             "name": "libXcursor",
@@ -1066,7 +1066,7 @@
           },
           {
             "name": "libXinerama",
-            "version": "1.1.5,1"
+            "version": "1.1.6,1"
           },
           {
             "name": "libXrandr",
@@ -1242,7 +1242,7 @@
           },
           {
             "name": "pixman",
-            "version": "0.46.2"
+            "version": "0.46.4"
           },
           {
             "name": "pkg",
@@ -1282,7 +1282,7 @@
           },
           {
             "name": "qbittorrent-nox",
-            "version": "5.1.4_1"
+            "version": "5.2.0"
           },
           {
             "name": "qt6-base",
@@ -1370,7 +1370,7 @@
           },
           {
             "name": "xorgproto",
-            "version": "2024.1"
+            "version": "2025.1"
           },
           {
             "name": "zstd",
