@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-13T21:01:07Z",
+  "generated": "2026-06-19T06:42:13Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.1.4_1",
       "arch": "amd64",
-      "generated": "2026-06-13T20:57:46Z",
+      "generated": "2026-06-19T06:41:00Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -567,7 +567,7 @@
           },
           {
             "name": "python311",
-            "version": "3.11.15_2"
+            "version": "3.11.15_3"
           },
           {
             "name": "qbittorrent-nox",
@@ -714,9 +714,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "5.2.1",
+      "app_version": "5.2.2",
       "arch": "amd64",
-      "generated": "2026-06-13T20:59:55Z",
+      "generated": "2026-06-19T06:38:45Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -974,7 +974,7 @@
           },
           {
             "name": "hwdata",
-            "version": "0.407,1"
+            "version": "0.408,1"
           },
           {
             "name": "icu",
@@ -1214,7 +1214,7 @@
           },
           {
             "name": "pango",
-            "version": "1.56.4_1"
+            "version": "1.57.1"
           },
           {
             "name": "pcre2",
@@ -1262,11 +1262,11 @@
           },
           {
             "name": "python311",
-            "version": "3.11.15_2"
+            "version": "3.11.15_3"
           },
           {
             "name": "qbittorrent-nox",
-            "version": "5.2.1"
+            "version": "5.2.2"
           },
           {
             "name": "qt6-base",
