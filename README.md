@@ -81,6 +81,9 @@ services:
     name: qbittorrent
     options:
       - container: 'boot args:--pull'
+      - expose="8080:8080 proto:tcp" \
+      - expose="6881:6881 proto:tcp" \
+      - expose="6881:6881 proto:udp" \
     oci:
       user: root
       environment:
@@ -109,6 +112,7 @@ ARG tag=latest
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/qbittorrent:${tag}
 ```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
 
@@ -128,6 +132,30 @@ podman run -d --name qbittorrent \
   -v /path/to/downloads:/downloads \
   ghcr.io/daemonless/qbittorrent:latest
 ```
+
+### AppJail
+
+```bash
+appjail oci run -Pd \
+  -o overwrite=force \
+  -o container="args:--pull" \
+  -o virtualnet=":<random> default" \
+  -o nat \
+  -o expose="8080:8080 proto:tcp" \
+  -o expose="6881:6881 proto:tcp" \
+  -o expose="6881:6881 proto:udp" \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
+  -e WEBUI_PORT=8080 \
+  -e TORRENTING_PORT=6881 \
+  -e WEBUI_PASSWORD=<WEBUI_PASSWORD> \
+  -e WEBUI_AUTH=false \
+  -o fstab="/path/to/containers/qbittorrent /config <pseudofs>" \
+  -o fstab="/path/to/downloads /downloads <pseudofs>" \
+  ghcr.io/daemonless/qbittorrent:latest qbittorrent
+```
+**Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Ansible
 
