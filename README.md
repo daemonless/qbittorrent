@@ -35,23 +35,23 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 ```yaml
 services:
   qbittorrent:
-    image: ghcr.io/daemonless/qbittorrent:latest
+    image: "ghcr.io/daemonless/qbittorrent:latest"
     container_name: qbittorrent
     environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
-      - WEBUI_PORT=8080
-      - TORRENTING_PORT=6881
-      - WEBUI_PASSWORD=<WEBUI_PASSWORD>
-      - WEBUI_AUTH=false
+      - PUID=1000  # User ID for the application process
+      - PGID=1000  # Group ID for the application process
+      - TZ=UTC  # Timezone for the container
+      - WEBUI_PORT=8080  # Web UI port (must match port mapping)
+      - TORRENTING_PORT=6881  # BitTorrent listening port for peer connections (must match port mapping)
+      - WEBUI_PASSWORD=<WEBUI_PASSWORD>  # Set a persistent admin password. If unset, a temporary password is generated each restart and printed to the logs.
+      - WEBUI_AUTH=false  # Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled).
     volumes:
       - "/path/to/containers/qbittorrent:/config"
       - "/path/to/downloads:/downloads"
     ports:
-      - 8080:8080
-      - 6881:6881
-      - 6881:6881
+      - "8080:8080"
+      - "6881:6881"
+      - "6881:6881"
     restart: unless-stopped
 ```
 
@@ -135,7 +135,7 @@ podman run -d --name qbittorrent \
 - name: Deploy qbittorrent
   containers.podman.podman_container:
     name: qbittorrent
-    image: ghcr.io/daemonless/qbittorrent:latest
+    image: "ghcr.io/daemonless/qbittorrent:latest"
     state: started
     restart_policy: always
     env:
