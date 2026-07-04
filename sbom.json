@@ -1,11 +1,11 @@
 {
-  "generated": "2026-06-21T12:24:27Z",
+  "generated": "2026-07-04T21:51:15Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.1.4_1",
       "arch": "amd64",
-      "generated": "2026-06-21T12:20:48Z",
+      "generated": "2026-07-04T21:48:46Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -27,11 +27,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -107,7 +107,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -119,7 +119,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -127,7 +127,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.1"
+            "version": "15.1p1"
           },
           {
             "name": "FreeBSD-zlib",
@@ -575,7 +575,7 @@
           },
           {
             "name": "python311",
-            "version": "3.11.15_3"
+            "version": "3.11.15_4"
           },
           {
             "name": "qbittorrent-nox",
@@ -724,7 +724,7 @@
     "pkg-latest": {
       "app_version": "5.2.2",
       "arch": "amd64",
-      "generated": "2026-06-21T12:23:12Z",
+      "generated": "2026-07-04T21:50:06Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -746,11 +746,11 @@
           },
           {
             "name": "FreeBSD-clibs",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.0"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-ctf-lib",
@@ -822,7 +822,7 @@
           },
           {
             "name": "FreeBSD-runtime",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-tcpd",
@@ -834,7 +834,7 @@
           },
           {
             "name": "FreeBSD-utilities",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-xz-lib",
@@ -842,7 +842,7 @@
           },
           {
             "name": "FreeBSD-zfs-lib",
-            "version": "15.0p10"
+            "version": "15.0p11"
           },
           {
             "name": "FreeBSD-zlib",
@@ -918,7 +918,7 @@
           },
           {
             "name": "expat",
-            "version": "2.8.1"
+            "version": "2.8.2"
           },
           {
             "name": "fontconfig",
@@ -974,7 +974,7 @@
           },
           {
             "name": "harfbuzz",
-            "version": "13.2.1"
+            "version": "14.2.1"
           },
           {
             "name": "hicolor-icon-theme",
@@ -1002,7 +1002,7 @@
           },
           {
             "name": "jq",
-            "version": "1.8.1"
+            "version": "1.8.2"
           },
           {
             "name": "json-glib",
@@ -1070,7 +1070,7 @@
           },
           {
             "name": "libXrandr",
-            "version": "1.5.4"
+            "version": "1.5.5"
           },
           {
             "name": "libXrender",
@@ -1126,7 +1126,7 @@
           },
           {
             "name": "libffi",
-            "version": "3.5.2"
+            "version": "3.6.0"
           },
           {
             "name": "libglvnd",
@@ -1166,7 +1166,7 @@
           },
           {
             "name": "librsvg2-rust",
-            "version": "2.62.2_1"
+            "version": "2.62.3"
           },
           {
             "name": "libthai",
@@ -1190,7 +1190,7 @@
           },
           {
             "name": "libxkbcommon",
-            "version": "1.13.1"
+            "version": "1.13.2"
           },
           {
             "name": "libxml2",
@@ -1198,7 +1198,7 @@
           },
           {
             "name": "llvm19",
-            "version": "19.1.7_3"
+            "version": "19.1.7_4"
           },
           {
             "name": "lua53",
@@ -1249,28 +1249,32 @@
             "version": "127"
           },
           {
-            "name": "py311-evdev",
+            "name": "py312-evdev",
             "version": "1.9.1_1"
           },
           {
-            "name": "py311-libevdev",
+            "name": "py312-libevdev",
             "version": "0.11_2"
           },
           {
-            "name": "py311-packaging",
+            "name": "py312-packaging",
             "version": "26.2"
           },
           {
-            "name": "py311-pyudev",
+            "name": "py312-pyudev",
             "version": "0.24.1_1"
           },
           {
-            "name": "py311-six",
+            "name": "py312-setuptools",
+            "version": "63.1.0_3"
+          },
+          {
+            "name": "py312-six",
             "version": "1.17.0"
           },
           {
-            "name": "python311",
-            "version": "3.11.15_3"
+            "name": "python312",
+            "version": "3.12.13_3"
           },
           {
             "name": "qbittorrent-nox",
@@ -1395,6 +1399,10 @@
             "version": "0.24.1"
           },
           {
+            "name": "setuptools",
+            "version": "63.1.0"
+          },
+          {
             "name": "six",
             "version": "1.17.0"
           }
@@ -1405,15 +1413,15 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 160,
+        "freebsd": 161,
         "go": 0,
         "java": 0,
         "node": 0,
         "php": 0,
-        "python": 6,
+        "python": 7,
         "ruby": 0,
         "rust": 0,
-        "total": 166
+        "total": 168
       }
     }
   }
