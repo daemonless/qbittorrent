@@ -14,4 +14,4 @@ cit:
   mode: screenshot
   port: 8080
   ready: "To control qBittorrent"
-  screenshot_wait: 3
+  screenshot_wait: 12
