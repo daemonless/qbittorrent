@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-01T14:27:42Z",
+  "generated": "2026-08-10T07:36:43Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.2.3",
       "arch": "amd64",
-      "generated": "2026-08-01T14:13:42Z",
+      "generated": "2026-08-10T07:32:22Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -930,7 +930,7 @@
               "GPLv1+"
             ],
             "name": "perl5",
-            "version": "5.42.2"
+            "version": "5.42.3"
           },
           {
             "licenses": [
@@ -1241,7 +1241,7 @@
     "pkg-latest": {
       "app_version": "5.2.3",
       "arch": "amd64",
-      "generated": "2026-08-01T14:19:21Z",
+      "generated": "2026-08-10T07:32:58Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1555,7 +1555,7 @@
               "CUPS"
             ],
             "name": "cups",
-            "version": "2.4.19_1"
+            "version": "2.4.19_2"
           },
           {
             "licenses": [
@@ -1655,7 +1655,7 @@
               "LGPL20"
             ],
             "name": "glib",
-            "version": "2.86.4,2"
+            "version": "2.88.3,2"
           },
           {
             "licenses": [
@@ -1722,7 +1722,7 @@
               "GPLv2+"
             ],
             "name": "hwdata",
-            "version": "0.409,1"
+            "version": "0.410,1"
           },
           {
             "licenses": [
@@ -1857,7 +1857,7 @@
               "MIT"
             ],
             "name": "libXft",
-            "version": "2.3.8"
+            "version": "2.3.9"
           },
           {
             "licenses": [
@@ -1934,7 +1934,7 @@
               "MIT"
             ],
             "name": "libdrm",
-            "version": "2.4.133,1"
+            "version": "2.4.134,1"
           },
           {
             "licenses": [
@@ -2069,7 +2069,7 @@
               "BSD2CLAUSE"
             ],
             "name": "libudev-devd",
-            "version": "0.6.0"
+            "version": "0.7.0"
           },
           {
             "licenses": [
@@ -2166,7 +2166,7 @@
               "GPLv1+"
             ],
             "name": "perl5",
-            "version": "5.42.2"
+            "version": "5.42.3"
           },
           {
             "licenses": [
@@ -2342,7 +2342,7 @@
               "APACHE20"
             ],
             "name": "vulkan-loader",
-            "version": "1.4.356"
+            "version": "1.4.357"
           },
           {
             "licenses": [

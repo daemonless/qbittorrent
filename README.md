@@ -18,14 +18,12 @@ Fast, stable BitTorrent client with a feature-rich web UI. Supports DHT, PEX, en
 | **Website** | [https://www.qbittorrent.org/](https://www.qbittorrent.org/) |
 
 ## Version Tags
-
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
 | `latest` / `pkg` | **FreeBSD Quarterly**. Uses stable, tested packages. | Most users. Matches Linux Docker behavior. |
 | `pkg-latest` | **FreeBSD Latest**. Rolling package updates. | Newest FreeBSD packages. |
 
 ## Prerequisites
-
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
 
 ## Deployment
@@ -56,10 +54,11 @@ services:
 ```
 
 ### AppJail Director
-
 **.env**:
 
 ```
+# .env
+
 DIRECTOR_PROJECT=qbittorrent
 PUID=1000
 PGID=1000
@@ -73,6 +72,8 @@ WEBUI_AUTH=false
 **appjail-director.yml**:
 
 ```yaml
+# appjail-director.yml
+
 options:
   - virtualnet: ':<random> default'
   - nat:
@@ -81,9 +82,9 @@ services:
     name: qbittorrent
     options:
       - container: 'boot args:--pull'
-      - expose="8080:8080 proto:tcp" \
-      - expose="6881:6881 proto:tcp" \
-      - expose="6881:6881 proto:udp" \
+      - expose: '8080:8080 proto:tcp'
+      - expose: '6881:6881 proto:tcp'
+      - expose: '6881:6881 proto:udp'
     oci:
       user: root
       environment:
@@ -107,6 +108,8 @@ volumes:
 **Makejail**:
 
 ```
+# Makejail
+
 ARG tag=latest
 
 OPTION overwrite=force
@@ -216,7 +219,7 @@ Access at: `http://localhost:8080`
 
 **Architectures:** amd64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
-**Base:** FreeBSD 15.0
+**Base:** FreeBSD 15.1
 
 ---
 
