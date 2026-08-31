@@ -50,8 +50,11 @@ services:
       - "8080:8080"
       - "6881:6881"
       - "6881:6881"
-    restart: unless-stopped
+    # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
+    restart: always
 ```
+
+Save as `compose.yaml`, then run `podman-compose up -d`.
 
 ### AppJail Director
 **.env**:
@@ -115,6 +118,9 @@ ARG tag=latest
 OPTION overwrite=force
 OPTION from=ghcr.io/daemonless/qbittorrent:${tag}
 ```
+
+Save the files above, then run `appjail-director up`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
 
 ### Podman CLI
@@ -135,6 +141,8 @@ podman run -d --name qbittorrent \
   -v /path/to/downloads:/downloads \
   ghcr.io/daemonless/qbittorrent:latest
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
 
 ### AppJail
 
@@ -158,7 +166,46 @@ appjail oci run -Pd \
   -o fstab="/path/to/downloads /downloads <pseudofs>" \
   ghcr.io/daemonless/qbittorrent:latest qbittorrent
 ```
+
+Save as `run.sh`, then run `sh run.sh`.
+
 **Note**: Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the IPv4 address assigned by the virtual network.
+
+### Bastille
+
+> [!WARNING]
+> Bastille's OCI support is **experimental**. It requires `buildah`, shares the host network stack (`inherit`), and persists image-declared volumes under `--data-path`.
+
+```yaml
+services:
+  qbittorrent:
+    image: "ghcr.io/daemonless/qbittorrent:latest"
+    container_name: qbittorrent
+    network_mode: host  # jail shares host networking
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+      - WEBUI_PASSWORD=<WEBUI_PASSWORD>
+      - WEBUI_AUTH=false
+```
+
+Save as `podman-compose.yml`, then run `bastille up`. Or via CLI:
+
+```bash
+bastille create -O \
+  --env PUID=1000 \
+  --env PGID=1000 \
+  --env TZ=UTC \
+  --env WEBUI_PORT=8080 \
+  --env TORRENTING_PORT=6881 \
+  --env WEBUI_PASSWORD=<WEBUI_PASSWORD> \
+  --env WEBUI_AUTH=false \
+  --data-path /path/to/containers/qbittorrent \
+  qbittorrent ghcr.io/daemonless/qbittorrent:latest inherit
+```
 
 ### Ansible
 
@@ -185,6 +232,8 @@ appjail oci run -Pd \
       - "/path/to/containers/qbittorrent:/config"
       - "/path/to/downloads:/downloads"
 ```
+
+Save as `qbittorrent-deploy.yaml`, then run `ansible-playbook qbittorrent-deploy.yaml`.
 
 Access at: `http://localhost:8080`
 
