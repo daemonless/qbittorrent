@@ -1,11 +1,11 @@
 {
-  "generated": "2026-08-31T22:13:58Z",
+  "generated": "2026-09-12T10:17:58Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.2.3",
       "arch": "amd64",
-      "generated": "2026-08-31T22:11:38Z",
+      "generated": "2026-09-12T10:15:14Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -326,7 +326,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.3_1"
+            "version": "1.5.4"
           },
           {
             "licenses": [
@@ -1241,7 +1241,7 @@
     "pkg-latest": {
       "app_version": "5.2.3",
       "arch": "amd64",
-      "generated": "2026-08-31T22:11:14Z",
+      "generated": "2026-09-12T10:15:20Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1562,7 +1562,7 @@
               "BSD2CLAUSE"
             ],
             "name": "dav1d",
-            "version": "1.5.3_1"
+            "version": "1.5.4"
           },
           {
             "licenses": [
@@ -1604,7 +1604,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.3"
+            "version": "2.8.4"
           },
           {
             "licenses": [
@@ -1722,7 +1722,7 @@
               "GPLv2+"
             ],
             "name": "hwdata",
-            "version": "0.410,1"
+            "version": "0.411,1"
           },
           {
             "licenses": [
@@ -1780,7 +1780,7 @@
               "APACHE20"
             ],
             "name": "lerc",
-            "version": "4.1.1"
+            "version": "4.2.0"
           },
           {
             "licenses": [
@@ -1927,7 +1927,7 @@
               "MIT"
             ],
             "name": "libdeflate",
-            "version": "1.25"
+            "version": "1.26"
           },
           {
             "licenses": [
@@ -2048,7 +2048,7 @@
               "LGPL20"
             ],
             "name": "librsvg2-rust",
-            "version": "2.62.3_1"
+            "version": "2.62.3_2"
           },
           {
             "licenses": [
@@ -2097,7 +2097,7 @@
               "MIT"
             ],
             "name": "libxml2",
-            "version": "2.15.3"
+            "version": "2.15.4"
           },
           {
             "licenses": [
@@ -2158,7 +2158,7 @@
               "BSD3CLAUSE"
             ],
             "name": "pcre2",
-            "version": "10.47_1"
+            "version": "10.48"
           },
           {
             "licenses": [
@@ -2216,7 +2216,7 @@
               "APACHE20"
             ],
             "name": "py312-packaging",
-            "version": "26.2"
+            "version": "26.3"
           },
           {
             "licenses": [
@@ -2439,7 +2439,7 @@
           {
             "name": "packaging",
             "purl": "",
-            "version": "26.2"
+            "version": "26.3"
           },
           {
             "name": "pyudev",
