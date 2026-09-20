@@ -7,6 +7,7 @@ Source: dbuild templates
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/qbittorrent/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/qbittorrent/actions)
 [![Last Commit](https://img.shields.io/github/last-commit/daemonless/qbittorrent?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/qbittorrent/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/qbittorrent?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/qbittorrent)
 
 Fast, stable BitTorrent client with a feature-rich web UI. Supports DHT, PEX, encryption, magnet links, RSS, IP filtering, and remote management.
 

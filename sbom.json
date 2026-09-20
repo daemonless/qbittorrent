@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-12T10:17:58Z",
+  "generated": "2026-09-20T23:51:30Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.2.3",
       "arch": "amd64",
-      "generated": "2026-09-12T10:15:14Z",
+      "generated": "2026-09-20T23:42:31Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -63,6 +63,13 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-devmatch",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD-3-Clause"
+            ],
+            "name": "FreeBSD-dhclient",
             "version": "15.1"
           },
           {
@@ -188,6 +195,13 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
+            "name": "FreeBSD-resolvconf",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
             "name": "FreeBSD-runtime",
             "version": "15.1p3"
           },
@@ -296,7 +310,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -1227,7 +1241,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 164,
+        "freebsd": 166,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1235,13 +1249,13 @@
         "python": 7,
         "ruby": 0,
         "rust": 0,
-        "total": 171
+        "total": 173
       }
     },
     "pkg-latest": {
       "app_version": "5.2.3",
       "arch": "amd64",
-      "generated": "2026-09-12T10:15:20Z",
+      "generated": "2026-09-20T23:47:19Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1299,6 +1313,13 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-devmatch",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD-3-Clause"
+            ],
+            "name": "FreeBSD-dhclient",
             "version": "15.1"
           },
           {
@@ -1424,6 +1445,13 @@
             "licenses": [
               "BSD2CLAUSE"
             ],
+            "name": "FreeBSD-resolvconf",
+            "version": "15.1"
+          },
+          {
+            "licenses": [
+              "BSD2CLAUSE"
+            ],
             "name": "FreeBSD-runtime",
             "version": "15.1p3"
           },
@@ -1532,7 +1560,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.127"
+            "version": "3.129"
           },
           {
             "licenses": [
@@ -2076,7 +2104,7 @@
               "HPND"
             ],
             "name": "libwacom",
-            "version": "2.12.1"
+            "version": "2.19.1"
           },
           {
             "licenses": [
@@ -2463,7 +2491,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 164,
+        "freebsd": 166,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2471,7 +2499,7 @@
         "python": 7,
         "ruby": 0,
         "rust": 0,
-        "total": 171
+        "total": 173
       }
     }
   }
