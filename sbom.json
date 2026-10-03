@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-22T14:42:38Z",
+  "generated": "2026-10-03T17:05:29Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.2.3",
       "arch": "amd64",
-      "generated": "2026-09-22T14:40:40Z",
+      "generated": "2026-10-03T17:02:47Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -49,7 +49,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -1253,9 +1253,9 @@
       }
     },
     "pkg-latest": {
-      "app_version": "5.2.3_2",
+      "app_version": "5.2.4",
       "arch": "amd64",
-      "generated": "2026-09-22T14:39:46Z",
+      "generated": "2026-10-03T17:03:12Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1299,7 +1299,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-clibs-lib32",
-            "version": "15.1p2"
+            "version": "15.1p4"
           },
           {
             "licenses": [
@@ -1546,7 +1546,7 @@
               "BSL"
             ],
             "name": "boost-libs",
-            "version": "1.91.0"
+            "version": "1.92.0"
           },
           {
             "licenses": [
@@ -1604,7 +1604,7 @@
               "GPLv2+"
             ],
             "name": "dbus-glib",
-            "version": "0.114"
+            "version": "0.116"
           },
           {
             "licenses": [
@@ -1654,7 +1654,7 @@
               "LGPL21"
             ],
             "name": "fribidi",
-            "version": "1.0.16"
+            "version": "1.0.17"
           },
           {
             "licenses": [
@@ -2090,7 +2090,7 @@
               "BSD3CLAUSE"
             ],
             "name": "libtorrent-rasterbar2",
-            "version": "2.0.13,1"
+            "version": "2.0.13_1,1"
           },
           {
             "licenses": [
@@ -2186,7 +2186,7 @@
               "BSD3CLAUSE"
             ],
             "name": "pcre2",
-            "version": "10.48"
+            "version": "10.49"
           },
           {
             "licenses": [
@@ -2272,14 +2272,14 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14"
+            "version": "3.12.14_1"
           },
           {
             "licenses": [
               "GPLv2+"
             ],
             "name": "qbittorrent-nox",
-            "version": "5.2.3_2"
+            "version": "5.2.4"
           },
           {
             "licenses": [

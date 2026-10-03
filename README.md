@@ -45,7 +45,7 @@ services:
       - WEBUI_PASSWORD=<WEBUI_PASSWORD>  # Set a persistent admin password. If unset, a temporary password is generated each restart and printed to the logs.
       - WEBUI_AUTH=false  # Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled).
     volumes:
-      - "/path/to/containers/qbittorrent:/config"
+      - "/containers/qbittorrent:/config"
       - "/path/to/downloads:/downloads"
     ports:
       - "8080:8080"
@@ -104,7 +104,7 @@ services:
       - downloads: /downloads
 volumes:
   qbittorrent:
-    device: '/path/to/containers/qbittorrent'
+    device: '/containers/qbittorrent'
   downloads:
     device: 'downloads'
 ```
@@ -122,59 +122,6 @@ OPTION from=ghcr.io/daemonless/qbittorrent:${tag}
 ```
 
 Save the files above, then run `appjail-director up`.
-
-
-> [!WARNING]
-> Exposing ports in AppJail means that your service can be reached from remote hosts. If that is not your intention, do not expose the ports and communicate with the service using the jail's IPv4 address or hostname assigned by the virtual network.
->
-> To avoid exposing ports, just remove the `expose` option in your `appjail-director.yml` or from your command-line arguments.
-
-### Podman CLI
-
-```bash
-podman run -d --name qbittorrent \
-  -p 8080:8080 \
-  -p 6881:6881 \
-  -p 6881:6881 \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -e WEBUI_PORT=8080 \
-  -e TORRENTING_PORT=6881 \
-  -e WEBUI_PASSWORD=<WEBUI_PASSWORD> \
-  -e WEBUI_AUTH=false \
-  -v /path/to/containers/qbittorrent:/config \
-  -v /path/to/downloads:/downloads \
-  ghcr.io/daemonless/qbittorrent:latest
-```
-
-Save as `run.sh`, then run `sh run.sh`.
-
-### AppJail
-
-
-```bash
-appjail oci run -Pd \
-  -o overwrite=force \
-  -o container="args:--pull" \
-  -o virtualnet=":<random> default" \
-  -o nat \
-  -o expose="8080:8080 proto:tcp" \
-  -o expose="6881:6881 proto:tcp" \
-  -o expose="6881:6881 proto:udp" \
-  -e PUID=1000 \
-  -e PGID=1000 \
-  -e TZ=UTC \
-  -e WEBUI_PORT=8080 \
-  -e TORRENTING_PORT=6881 \
-  -e WEBUI_PASSWORD=<WEBUI_PASSWORD> \
-  -e WEBUI_AUTH=false \
-  -o fstab="/path/to/containers/qbittorrent /config <pseudofs>" \
-  -o fstab="/path/to/downloads /downloads <pseudofs>" \
-  ghcr.io/daemonless/qbittorrent:latest qbittorrent
-```
-
-Save the files above, then run `sh run.sh`.
 
 
 > [!WARNING]
@@ -203,53 +150,11 @@ services:
       - WEBUI_PASSWORD=<WEBUI_PASSWORD>
       - WEBUI_AUTH=false
     volumes:
-      - "/path/to/containers/qbittorrent:/config"
+      - "/containers/qbittorrent:/config"
       - "/path/to/downloads:/downloads"
 ```
 
-Save as `bastille-compose.yml`, then run `bastille up`. Or via CLI:
-
-```bash
-bastille create -O \
-  --env PUID=1000 \
-  --env PGID=1000 \
-  --env TZ=UTC \
-  --env WEBUI_PORT=8080 \
-  --env TORRENTING_PORT=6881 \
-  --env WEBUI_PASSWORD=<WEBUI_PASSWORD> \
-  --env WEBUI_AUTH=false \
-  --volume /path/to/containers/qbittorrent /config \
-  --volume /path/to/downloads /downloads \
-  qbittorrent ghcr.io/daemonless/qbittorrent:latest inherit
-```
-
-### Ansible
-
-```yaml
-- name: Deploy qbittorrent
-  containers.podman.podman_container:
-    name: qbittorrent
-    image: "ghcr.io/daemonless/qbittorrent:latest"
-    state: started
-    restart_policy: always
-    env:
-      PUID: "1000"
-      PGID: "1000"
-      TZ: "UTC"
-      WEBUI_PORT: "8080"
-      TORRENTING_PORT: "6881"
-      WEBUI_PASSWORD: "<WEBUI_PASSWORD>"
-      WEBUI_AUTH: "false"
-    ports:
-      - "8080:8080"
-      - "6881:6881"
-      - "6881:6881"
-    volumes:
-      - "/path/to/containers/qbittorrent:/config"
-      - "/path/to/downloads:/downloads"
-```
-
-Save as `qbittorrent-deploy.yaml`, then run `ansible-playbook qbittorrent-deploy.yaml`.
+Save as `bastille-compose.yml`, then run `bastille up`.
 
 Access at: `http://localhost:8080`
 
