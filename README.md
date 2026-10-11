@@ -42,7 +42,7 @@ services:
       - TZ=UTC  # Timezone for the container
       - WEBUI_PORT=8080  # Web UI port (must match port mapping)
       - TORRENTING_PORT=6881  # BitTorrent listening port for peer connections (must match port mapping)
-      - WEBUI_PASSWORD=<WEBUI_PASSWORD>  # Set a persistent admin password. If unset, a temporary password is generated each restart and printed to the logs.
+      - WEBUI_PASSWORD=<WEBUI_PASSWORD>  # Admin password for the Web UI. Without one, a temporary password is printed to the logs at every restart.
       - WEBUI_AUTH=false  # Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled).
     volumes:
       - "/containers/qbittorrent:/config"
@@ -169,7 +169,7 @@ Access at: `http://localhost:8080`
 | `TZ` | `UTC` | Timezone for the container |
 | `WEBUI_PORT` | `8080` | Web UI port (must match port mapping) |
 | `TORRENTING_PORT` | `6881` | BitTorrent listening port for peer connections (must match port mapping) |
-| `WEBUI_PASSWORD` | `<WEBUI_PASSWORD>` | Set a persistent admin password. If unset, a temporary password is generated each restart and printed to the logs. |
+| `WEBUI_PASSWORD` | `<WEBUI_PASSWORD>` | Admin password for the Web UI. Without one, a temporary password is printed to the logs at every restart. |
 | `WEBUI_AUTH` | `false` | Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled). |
 
 ### Volumes
