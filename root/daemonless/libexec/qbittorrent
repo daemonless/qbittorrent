@@ -1,4 +1,4 @@
 #!/bin/sh
-exec s6-setuidgid bsd /usr/local/bin/qbittorrent-nox \
+exec /usr/local/bin/qbittorrent-nox \
     --confirm-legal-notice \
     --profile=/config

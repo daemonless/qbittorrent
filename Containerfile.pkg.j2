@@ -1,5 +1,5 @@
 ARG BASE_VERSION=15.1
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG FREEBSD_ARCH=amd64
 ARG PKG_NAME="qbittorrent-nox"
@@ -48,9 +48,11 @@ RUN pkg update && \
 
 # Copy service definition and init scripts
 COPY root/ /
-RUN chmod +x /etc/services.d/qbittorrent/run \
-             /etc/cont-init.d/20-qbittorrent-config \
-             /healthz
+RUN chmod +x /daemonless/libexec/qbittorrent /daemonless/init.d/*
+
+CMD ["/daemonless/libexec/qbittorrent"]
+
+RUN chmod +x /healthz
 
 # --- Expose (Injected by Generator) ---
 {%- if ports %}
