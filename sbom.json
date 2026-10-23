@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-22T00:05:43Z",
+  "generated": "2026-10-23T08:31:06Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
       "app_version": "5.2.4",
       "arch": "amd64",
-      "generated": "2026-10-22T00:03:44Z",
+      "generated": "2026-10-23T08:15:17Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -333,7 +333,7 @@
               "CUPS"
             ],
             "name": "cups",
-            "version": "2.4.19_2"
+            "version": "2.4.20"
           },
           {
             "licenses": [
@@ -369,13 +369,6 @@
             ],
             "name": "duktape-lib",
             "version": "2.7.0_1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -579,7 +572,7 @@
               "MIT"
             ],
             "name": "libX11",
-            "version": "1.8.13_1,1"
+            "version": "1.8.14,1"
           },
           {
             "licenses": [
@@ -642,7 +635,7 @@
               "MIT"
             ],
             "name": "libXi",
-            "version": "1.8.3,1"
+            "version": "1.8.4,1"
           },
           {
             "licenses": [
@@ -663,7 +656,7 @@
               "MIT"
             ],
             "name": "libXrender",
-            "version": "0.9.12"
+            "version": "0.9.13"
           },
           {
             "licenses": [
@@ -677,7 +670,7 @@
               "MIT"
             ],
             "name": "libXtst",
-            "version": "1.2.5"
+            "version": "1.2.6"
           },
           {
             "licenses": [
@@ -1082,24 +1075,10 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "GPLv2"
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -1241,7 +1220,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 166,
+        "freebsd": 163,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -1249,13 +1228,13 @@
         "python": 7,
         "ruby": 0,
         "rust": 0,
-        "total": 173
+        "total": 170
       }
     },
     "pkg-latest": {
       "app_version": "5.2.4_1",
       "arch": "amd64",
-      "generated": "2026-10-22T00:03:26Z",
+      "generated": "2026-10-23T08:09:47Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1619,13 +1598,6 @@
             ],
             "name": "duktape-lib",
             "version": "2.7.0_1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -2332,24 +2304,10 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "GPLv2"
             ],
             "name": "shared-mime-info",
             "version": "2.4_2"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
           },
           {
             "licenses": [
@@ -2491,7 +2449,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 166,
+        "freebsd": 163,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2499,7 +2457,7 @@
         "python": 7,
         "ruby": 0,
         "rust": 0,
-        "total": 173
+        "total": 170
       }
     }
   }
