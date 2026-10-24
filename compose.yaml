@@ -20,8 +20,8 @@ x-daemonless:
       TZ: "Timezone for the container"
       WEBUI_PORT: "Web UI port (must match port mapping)"
       TORRENTING_PORT: "BitTorrent listening port for peer connections (must match port mapping)"
-      WEBUI_PASSWORD: "Admin password for the Web UI. Without one, a temporary password is printed to the logs at every restart."
-      WEBUI_AUTH: "Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled)."
+      WEBUI_PASSWORD: "Password of the Web UI's admin user. Set, it turns the login on."
+      WEBUI_AUTH: "'true' or 'false' to force the Web UI login on or off. Unset: on when WEBUI_PASSWORD is set, else off (no login)."
     volumes:
       /config: "Configuration directory"
       /downloads: "Download directory"
@@ -42,7 +42,7 @@ services:
       - WEBUI_PORT=8080
       - TORRENTING_PORT=6881
       - WEBUI_PASSWORD=
-      - WEBUI_AUTH=false
+      - WEBUI_AUTH=
 
     volumes:
       - /path/to/containers/qbittorrent:/config

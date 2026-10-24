@@ -3,7 +3,13 @@
 
 WEBUI_PORT="${WEBUI_PORT:-8080}"
 TORRENTING_PORT="${TORRENTING_PORT:-6881}"
-WEBUI_AUTH="${WEBUI_AUTH:-false}"
+# A password given turns the login on unless WEBUI_AUTH says otherwise;
+# with none, the Web UI stays open as before.
+if [ -n "${WEBUI_PASSWORD}" ]; then
+    WEBUI_AUTH="${WEBUI_AUTH:-true}"
+else
+    WEBUI_AUTH="${WEBUI_AUTH:-false}"
+fi
 PUID="${PUID:-1000}"
 PGID="${PGID:-1000}"
 
@@ -30,6 +36,12 @@ fi
 sed -i '' "s|^WebUI\\\\Port=.*|WebUI\\\\Port=${WEBUI_PORT}|" "${CONF}"
 sed -i '' "s|^Session\\\\Port=.*|Session\\\\Port=${TORRENTING_PORT}|" "${CONF}"
 
+# The published port need not be WEBUI_PORT (8080 taken, another chosen):
+# with Host header validation on, every request then gets 401.
+sed -i '' "/^WebUI\\\\HostHeaderValidation=/d" "${CONF}"
+sed -i '' "/^\[Preferences\]/a\\
+WebUI\\\\HostHeaderValidation=false" "${CONF}"
+
 # 3. Handle Web UI Authentication Toggle
 if [ "${WEBUI_AUTH}" = "false" ]; then
     # Disable Auth: Force whitelist bypass for all IPs
@@ -52,11 +64,21 @@ else
     echo "[qbittorrent] Web UI authentication enabled (WEBUI_AUTH=true)"
 fi
 
-# 4. Set persistent password if provided
+# 4. Set persistent password if provided. qBittorrent 4.2+ reads only
+# Password_PBKDF2 (PBKDF2-HMAC-SHA512, 100000 rounds, 16-byte salt); it
+# ignored Password_ha1 and printed a temporary password on every start.
 if [ -n "${WEBUI_PASSWORD}" ]; then
-    HA1=$(printf '%s' "admin:Web Server:${WEBUI_PASSWORD}" | md5)
+    SALT=$(mktemp)
+    openssl rand 16 > "${SALT}"
+    SALT_HEX=$(od -An -tx1 "${SALT}" | tr -d ' \n')
+    SALT_B64=$(openssl base64 -A < "${SALT}")
+    rm -f "${SALT}"
+    PASS_HEX=$(printf '%s' "${WEBUI_PASSWORD}" | od -An -tx1 | tr -d ' \n')
+    KEY_B64=$(openssl kdf -keylen 64 -kdfopt digest:SHA512 -kdfopt "hexpass:${PASS_HEX}" \
+        -kdfopt "hexsalt:${SALT_HEX}" -kdfopt iter:100000 -binary PBKDF2 | openssl base64 -A)
     sed -i '' "/^WebUI\\\\Password_ha1=/d" "${CONF}"
+    sed -i '' "/^WebUI\\\\Password_PBKDF2=/d" "${CONF}"
     sed -i '' "/^\[Preferences\]/a\\
-WebUI\\\\Password_ha1=@ByteArray(${HA1})" "${CONF}"
+WebUI\\\\Password_PBKDF2=\"@ByteArray(${SALT_B64}:${KEY_B64})\"" "${CONF}"
     echo "[qbittorrent] Password set"
 fi
