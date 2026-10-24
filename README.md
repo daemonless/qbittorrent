@@ -42,8 +42,8 @@ services:
       - TZ=UTC  # Timezone for the container
       - WEBUI_PORT=8080  # Web UI port (must match port mapping)
       - TORRENTING_PORT=6881  # BitTorrent listening port for peer connections (must match port mapping)
-      - WEBUI_PASSWORD=<WEBUI_PASSWORD>  # Admin password for the Web UI. Without one, a temporary password is printed to the logs at every restart.
-      - WEBUI_AUTH=false  # Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled).
+      - WEBUI_PASSWORD=<WEBUI_PASSWORD>  # Password of the Web UI's admin user. Set, it turns the login on.
+      - WEBUI_AUTH=  # 'true' or 'false' to force the Web UI login on or off. Unset: on when WEBUI_PASSWORD is set, else off (no login).
     volumes:
       - "/containers/qbittorrent:/config"
       - "/path/to/downloads:/downloads"
@@ -70,7 +70,7 @@ TZ=UTC
 WEBUI_PORT=8080
 TORRENTING_PORT=6881
 WEBUI_PASSWORD=<WEBUI_PASSWORD>
-WEBUI_AUTH=false
+WEBUI_AUTH=
 ```
 
 **appjail-director.yml**:
@@ -148,15 +148,14 @@ services:
       - WEBUI_PORT=8080
       - TORRENTING_PORT=6881
       - WEBUI_PASSWORD=<WEBUI_PASSWORD>
-      - WEBUI_AUTH=false
+      - WEBUI_AUTH=
     volumes:
       - "/containers/qbittorrent:/config"
       - "/path/to/downloads:/downloads"
 ```
 
 Save as `bastille-compose.yml`, then run `bastille up`.
-
-Access at: `http://localhost:8080`
+Open `http://<server>:8080` from another machine (the server's own browser can't use a published port).
 
 ## Parameters
 
@@ -169,8 +168,8 @@ Access at: `http://localhost:8080`
 | `TZ` | `UTC` | Timezone for the container |
 | `WEBUI_PORT` | `8080` | Web UI port (must match port mapping) |
 | `TORRENTING_PORT` | `6881` | BitTorrent listening port for peer connections (must match port mapping) |
-| `WEBUI_PASSWORD` | `<WEBUI_PASSWORD>` | Admin password for the Web UI. Without one, a temporary password is printed to the logs at every restart. |
-| `WEBUI_AUTH` | `false` | Set to 'true' to enable Web UI authentication. (Note: Upstream/FreeBSD port enables auth by default, but this image defaults to disabled). |
+| `WEBUI_PASSWORD` | `<WEBUI_PASSWORD>` | Password of the Web UI's admin user. Set, it turns the login on. |
+| `WEBUI_AUTH` | `` | 'true' or 'false' to force the Web UI login on or off. Unset: on when WEBUI_PASSWORD is set, else off (no login). |
 
 ### Volumes
 
