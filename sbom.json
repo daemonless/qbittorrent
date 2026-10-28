@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-26T07:27:52Z",
+  "generated": "2026-10-28T15:50:34Z",
   "image": "qbittorrent",
   "tags": {
     "pkg": {
-      "app_version": "5.2.4",
+      "app_version": "5.2.4_1",
       "arch": "amd64",
-      "generated": "2026-10-26T07:25:17Z",
+      "generated": "2026-10-28T15:46:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -303,7 +303,7 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
@@ -1022,14 +1022,14 @@
               "GPLv2+"
             ],
             "name": "qbittorrent-nox",
-            "version": "5.2.4"
+            "version": "5.2.4_1"
           },
           {
             "licenses": [
               "LGPL21"
             ],
             "name": "qt6-base",
-            "version": "6.11.2"
+            "version": "6.11.2_1"
           },
           {
             "licenses": [
@@ -1234,7 +1234,7 @@
     "pkg-latest": {
       "app_version": "5.2.4_2",
       "arch": "amd64",
-      "generated": "2026-10-26T07:25:38Z",
+      "generated": "2026-10-28T15:44:29Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -1547,7 +1547,7 @@
               "MPL11"
             ],
             "name": "cairo",
-            "version": "1.18.2,3"
+            "version": "1.18.6,3"
           },
           {
             "licenses": [
@@ -2012,7 +2012,7 @@
               "MIT"
             ],
             "name": "libinput",
-            "version": "1.31.1"
+            "version": "1.31.1_1"
           },
           {
             "licenses": [
@@ -2098,6 +2098,13 @@
             ],
             "name": "libxml2",
             "version": "2.15.4"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "libyaml",
+            "version": "0.2.5"
           },
           {
             "licenses": [
@@ -2198,13 +2205,6 @@
           },
           {
             "licenses": [
-              "BSD3CLAUSE"
-            ],
-            "name": "py312-evdev",
-            "version": "1.9.1_1"
-          },
-          {
-            "licenses": [
               "MIT"
             ],
             "name": "py312-libevdev",
@@ -2224,6 +2224,13 @@
             ],
             "name": "py312-pyudev",
             "version": "0.24.1_1"
+          },
+          {
+            "licenses": [
+              "MIT"
+            ],
+            "name": "py312-pyyaml",
+            "version": "6.0.3_1"
           },
           {
             "licenses": [
@@ -2408,11 +2415,6 @@
         "php": [],
         "python": [
           {
-            "name": "evdev",
-            "purl": "",
-            "version": "1.9.1"
-          },
-          {
             "name": "example",
             "purl": "",
             "version": "21.12"
@@ -2433,6 +2435,11 @@
             "version": "0.24.1"
           },
           {
+            "name": "pyyaml",
+            "purl": "",
+            "version": "6.0.3"
+          },
+          {
             "name": "setuptools",
             "purl": "",
             "version": "63.1.0"
@@ -2449,7 +2456,7 @@
       "source": "pkg",
       "summary": {
         "dotnet": 0,
-        "freebsd": 163,
+        "freebsd": 164,
         "go": 0,
         "java": 0,
         "node": 0,
@@ -2457,7 +2464,7 @@
         "python": 7,
         "ruby": 0,
         "rust": 0,
-        "total": 170
+        "total": 171
       }
     }
   }
