@@ -50,7 +50,7 @@ services:
     ports:
       - "8080:8080"
       - "6881:6881"
-      - "6881:6881"
+      - "6881:6881/udp"
     # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
     restart: always
 ```
